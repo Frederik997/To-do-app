@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #2c5364;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+body {
+  color: #fff;
+}
+
+/* Title Styling*/
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+
+/* Input Field Styling */
+.form-group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+input {
+  display: block;
+  width: 60%;
+  font-size: 14pt;
+  padding: 10px 13px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.label-input {
+  position: absolute;
+  top: 10px;
+  left: 22%;
+  color: #999;
+  font-size: 14pt;
+  font-weight: normal;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  display: block;
+  margin-inline: auto;
+}
+
+input:focus ~ .label-input,
+input:valid ~ .label-input {
+  top: -20px;
+  font-size: 12pt;
+  color: #fff;
+}
+
+.bar {
+  display: block;
+  position: relative;
+  width: 55%;
+  margin-inline: auto;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #610c7d;
+  transition: all 0.2s ease;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* Title positioning */
+.title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* list items */
+.container {
+  width: 400px;
+  margin: auto;
+}
+.list {
+  font-size: 1.2rem;
+  margin: 0;
+  flex-grow: 1;
+  flex-basis: 600px;
+}
+.list-cont {
+  display: flex;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+input[type="checkbox"] {
+  flex-shrink: 1;
+}
+
+.highlight {
+  background: #ad6dc2;
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #610c7d;
+  accent-color: #610c7d;
+}
+
+/* Buttons */
+button {
+  padding: 15px 50px;
+  font-family: "Merriweather", serif;
+  border: 1px solid #610c7d;
+  background: #610c7d;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  border-radius: 6px;
+  margin-top: -18px;
+  margin-bottom: 20px;
+}
+.delete-btn {
+  background: #fff;
+  color: #610c7d;
+  margin-left: 10px;
+  padding: 13px 50px;
+}
+
+.btn-container {
+  text-align: center;
+}
+@media (max-width: 425px) {
+  .label-input {
+    font-size: 10pt;
+    top: 14px;
+  }
+  button {
+    padding: 8px 35px;
+  }
+  .delete-btn {
+    padding: 7px 35px;
+  }
+}
